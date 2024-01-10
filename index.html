@@ -1,1 +1,48 @@
-测试1
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>纪念网站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            padding-top: 10%;
+        }
+        img {
+            width: 322px;
+            height: 540px;
+            border-radius: 50%;
+        }
+        .days {
+            margin-top: 30px;
+            font-size: 36px;
+        }
+        .spacer {
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img src="http://m.changjiangtimes.com/upload_files/szb/20120824/images/CJC07824C001_s.jpg" alt="头像">
+    <div class="days" id="daysSinceUpdate">距上次《睡前消息》更新已经过去了 <span id="numDays">0</span> 天</div>
+    <div class="spacer"></div>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=3&id=2489849931&auto=1&height=66"></iframe>
+
+    <script>
+        function calculateDaysSinceUpdate() {
+            var lastUpdated = new Date('2023-12-17'); // 上次更新
+            var now = new Date();
+            var timeDiff = now - lastUpdated;
+            var daysSinceUpdate = Math.floor(timeDiff / (1000 * 3600 * 24));
+            document.getElementById('numDays').innerText = daysSinceUpdate;
+        }
+
+        window.onload = function() {
+            calculateDaysSinceUpdate();
+        };
+    </script>
+</body>
+</html>

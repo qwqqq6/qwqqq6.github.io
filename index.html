@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>纪念网站</title>
+    <title>纪念马前卒为人类进步做的贡献</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,17 +23,24 @@
         .spacer {
             height: 200px;
         }
+        .small-text {
+            font-size: 12px; /* 小字体大小 */
+            color: #CCCCCC; /* 浅灰色字体 */
+            margin-top: 10px; /* 与图片的间距 */
+        }
     </style>
 </head>
 <body>
-    <img src="1.jpg" alt="头像">
+    <img src="http://m.changjiangtimes.com/upload_files/szb/20120824/images/CJC07824C001_s.jpg" alt="头像">
+    <div class="small-text">马前卒 2023年12月 - 2023年12月</div>
+
     <div class="days" id="daysSinceUpdate">距上次《睡前消息》更新已经过去了 <span id="numDays">0</span> 天</div>
     <div class="spacer"></div>
     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=3&id=2489849931&auto=1&height=66"></iframe>
 
     <script>
         function calculateDaysSinceUpdate() {
-            var lastUpdated = new Date('2023-12-17'); // 上次更新
+            var lastUpdated = new Date('2023-12-17'); // 设置为特定的日期
             var now = new Date();
             var timeDiff = now - lastUpdated;
             var daysSinceUpdate = Math.floor(timeDiff / (1000 * 3600 * 24));
